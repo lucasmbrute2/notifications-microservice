@@ -14,5 +14,7 @@ export class Content {
     if (!isContentLengthValid) {
       throw new Error('Content length error');
     }
+
+    this.content = content;
   }
 }
