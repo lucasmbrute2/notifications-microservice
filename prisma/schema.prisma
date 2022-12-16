@@ -17,6 +17,7 @@ model Notification {
   createdAt   DateTime  @default(now())
   readAt      DateTime?
   recipientId String
+  canceledAt  DateTime?
 
   @@index([recipientId])
 }
