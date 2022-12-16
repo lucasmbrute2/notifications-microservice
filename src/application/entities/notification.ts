@@ -52,7 +52,7 @@ export class Notification {
   }
 
   public set category(category: string) {
-    this.props.category;
+    this.props.category = category;
   }
 
   public get category(): string {
