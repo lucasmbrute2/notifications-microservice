@@ -37,8 +37,6 @@ describe('Count recipients notifications', () => {
       recipientId: 'recipient-1',
     });
 
-    console.log(count);
-
     expect(count).toEqual(2);
   });
 });
