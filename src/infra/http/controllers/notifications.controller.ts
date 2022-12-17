@@ -1,8 +1,5 @@
 import { CancelNotification } from '@application/use-cases/cancel-notification';
-import {
-  CountRecipientNotificationsResponse,
-  CountRecipientsNotifications,
-} from '@application/use-cases/count-recipient-notifications';
+import { CountRecipientsNotifications } from '@application/use-cases/count-recipient-notifications';
 import { GetRecipientNotifications } from '@application/use-cases/get-recipient-notifications';
 import { ReadNotification } from '@application/use-cases/read-notification';
 import { UnreadNotification } from '@application/use-cases/unread-notification';
