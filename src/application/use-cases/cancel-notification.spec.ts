@@ -1,9 +1,8 @@
-import { Notification } from '@application/entities/notification';
 import { InMemoryNotifcationRepository } from '@test/repositories/in-memory-notifcations-repositories';
 import { CancelNotification } from './cancel-notification';
 import { randomUUID } from 'node:crypto';
-import { Content } from '@application/entities/content';
 import { NotifcationNotFound } from './errors/notification-not-found';
+import { makeNotification } from '@test/factories/notification-factory';
 
 describe('Send notification', () => {
   it('should be able to cancel a notification', async () => {
@@ -12,16 +11,12 @@ describe('Send notification', () => {
       notifcationRepository,
     );
 
-    const notifcation = new Notification({
-      category: 'social',
-      content: new Content('A beauty notification'),
-      recipientId: randomUUID(),
-    });
+    const notification = makeNotification({ recipientId: randomUUID() });
 
-    await notifcationRepository.create(notifcation);
+    await notifcationRepository.create(notification);
 
     await cancelNotificationUseCase.execute({
-      notificationId: notifcation.id,
+      notificationId: notification.id,
     });
 
     expect(notifcationRepository.notifications[0].canceledAt).toEqual(
