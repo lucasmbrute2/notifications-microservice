@@ -19,16 +19,15 @@ describe('Unread notification', () => {
     expect(notificationRepository.notifications[0].readAt).toBeNull();
   });
 
-  it('shoud not be able to unread a non existing notification', async ()=>){
+  it('shoud not be able to unread a non existing notification', async () => {
     const notificationRepository = new InMemoryNotifcationRepository();
     const unreadNotificationUseCase = new UnreadNotification(
       notificationRepository,
     );
-
-    expect(()=>{
-        return await unreadNotificationUseCase.execute({
-            notificationId: 'notification-fail-test',
-        });
-    }).rejects.toThrow(NotifcationNotFound)
-  }
+    expect(() => {
+      return unreadNotificationUseCase.execute({
+        notificationId: 'notification-fail-test',
+      });
+    }).rejects.toThrow(NotifcationNotFound);
+  });
 });
