@@ -11,7 +11,9 @@ export class createNotificationDTO {
   @IsNotEmpty()
   category: string;
 
-  @ApiProperty()
+  @ApiProperty({
+    type: 'UUID',
+  })
   @IsNotEmpty()
   @IsUUID()
   recipientId: string;
