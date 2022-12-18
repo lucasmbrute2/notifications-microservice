@@ -6,8 +6,8 @@
 
 ```
 run yarn
-run yarn start:dev
 set the kafka brokers ENV
+run yarn start:dev
 check swagger endpoints using /api at the end of the route.
 ```
 
