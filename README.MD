@@ -7,7 +7,7 @@
 ```
 1 - run yarn
 2 - set the kafka brokers ENV
-3 - check swagger endpoints.
+3 - check swagger endpoints using /api at the end for route.
 ```
 
 Thank you for read :)
