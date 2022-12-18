@@ -1,6 +1,6 @@
 # This is a application that handle 'notifications' operations.
 
-## We're using Kafka to comunicate wich other services, NestJS as BD Framework.
+## We're using Kafka to comunicate wich other services and NestJS as BD Framework.
 
 ### How to run the system.
 
