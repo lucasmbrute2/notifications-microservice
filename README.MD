@@ -5,9 +5,9 @@
 ### How to run the system.
 
 ```
-1 - run yarn
-2 - set the kafka brokers ENV
-3 - check swagger endpoints using /api at the end for route.
+run yarn
+set the kafka brokers ENV
+check swagger endpoints using /api at the end of the route.
 ```
 
 Thank you for read :)
